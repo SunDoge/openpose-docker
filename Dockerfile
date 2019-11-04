@@ -19,6 +19,7 @@ ENV PATH="/opt/cmake-3.14.2-Linux-x86_64/bin:${PATH}"
 #get openpose
 WORKDIR /openpose
 RUN git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose.git .
+RUN git submodule update --init --recursive --remote
 
 #build it
 WORKDIR /openpose/build
